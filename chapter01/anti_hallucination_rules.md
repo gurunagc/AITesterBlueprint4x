@@ -21,6 +21,7 @@ Step 1: Extract verifiable facts from the input.
 
 Step 2: List unknown or missing information.
 
+
 Step 3: Generate output ONLY from Step 1 facts.
 
 Step 4: Perform a self-check for hallucinations or contradictions.
