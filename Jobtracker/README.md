@@ -1,4 +1,4 @@
-# 📋 Job Tracker — Local-First Kanban Application
+# 📋 Job Tracker —  Kanban Application
 
 A modern, fast, and local-first Job Application Tracker built with **React 19**, **TypeScript**, **Vite**, and **Tailwind CSS**. Manage your job search pipeline across custom Kanban stages, track resume versions, get automated follow-up reminders, and analyze your interview/offer conversion rates—with 100% data privacy and offline IndexedDB persistence.
 
@@ -67,6 +67,7 @@ npm -v
    npm run dev
    ```
    Open [http://localhost:5173](http://localhost:5173) in your browser to view the application with Hot Module Replacement (HMR).
+   IT will open app with 5 Default enteries -- This is kept for testing purpose .
 
 ---
 
@@ -135,6 +136,3 @@ Task1/
 
 ---
 
-## 📄 License
-
-MIT
