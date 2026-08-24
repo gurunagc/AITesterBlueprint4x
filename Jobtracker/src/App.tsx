@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Plus, Moon, Sun, Download, Upload, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useJobs } from './hooks/useJobs';
@@ -7,7 +7,7 @@ import { useTheme } from './hooks/useTheme';
 import { DEFAULT_FILTER } from './hooks/useFilter';
 import type { FilterState } from './hooks/useFilter';
 import { getAllResumes } from './lib/db';
-import type { Job, ResumeEntry, KanbanStatus } from './types';
+import type { Job, ResumeEntry } from './types';
 import KanbanBoard from './components/Board/KanbanBoard';
 import JobFormModal from './components/Modals/JobFormModal';
 import DeleteConfirmModal from './components/Modals/DeleteConfirmModal';
@@ -27,7 +27,6 @@ export default function App() {
   const [resumeManagerOpen, setResumeManagerOpen] = useState(false);
   const [resumes, setResumes] = useState<ResumeEntry[]>([]);
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTER);
-  const searchRef = useRef<HTMLInputElement>(null);
 
   // Load resumes
   const loadResumes = useCallback(() => {

@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { Job, KanbanStatus, ActivityEntry } from '../types';
-import { REMINDER_ELIGIBLE_STATUSES } from '../types';
-import { getAllJobs, putJob, deleteJob as dbDeleteJob } from '../lib/db';
+import { getAllJobs, putJob, deleteJob as dbDeleteJob, clearAllJobs } from '../lib/db';
 
 // ── Seed data — Job 1 to Job 5 ───────────────────────────────────────────────
 function makeSeedJobs(): Job[] {
@@ -85,7 +84,6 @@ function makeSeedJobs(): Job[] {
       linkedInUrl: 'https://linkedin.com/jobs/view/555555',
       resumeUsed: 'ProductEng_Resume',
       appliedAt: daysAgo(10),
-      salaryRange: '₹50–60 LPA',
       notes: 'Final round done. Waiting for offer letter.',
       status: 'offer',
       columnOrder: 0,
@@ -190,7 +188,6 @@ export function useJobs() {
   );
 
   const importJobs = useCallback(async (importedJobs: Job[]) => {
-    const { clearAllJobs } = await import('../lib/db');
     await clearAllJobs();
     for (const job of importedJobs) {
       await putJob(job);

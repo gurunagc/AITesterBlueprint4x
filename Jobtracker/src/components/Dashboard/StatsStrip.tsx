@@ -1,4 +1,3 @@
-import React from 'react';
 import { Briefcase, TrendingUp, CheckCircle, XCircle } from 'lucide-react';
 import type { Job } from '../../types';
 import { KANBAN_COLUMNS } from '../../types';

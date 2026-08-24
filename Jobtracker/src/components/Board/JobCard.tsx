@@ -1,4 +1,3 @@
-import React from 'react';
 import { differenceInDays, parseISO, format } from 'date-fns';
 import { ExternalLink, Pencil, Trash2, Bell, BellOff } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -137,8 +136,8 @@ export default function JobCard({ job, onEdit, onDelete, onDismissReminder, onSn
           </span>
         )}
 
-        {/* Salary */}
-        {job.salaryRange && (
+        {/* Salary / Package */}
+        {job.salaryRange && job.status !== 'offer' && (
           <span className="text-xs px-2 py-0.5 rounded-full bg-green-50 dark:bg-green-900/30 text-green-600 dark:text-green-400 font-medium">
             {job.salaryRange}
           </span>

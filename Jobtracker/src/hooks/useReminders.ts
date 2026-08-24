@@ -18,7 +18,7 @@ export function isDue(job: Job): boolean {
 
 export function useReminders(
   jobs: Job[],
-  updateJob: (id: string, updates: Partial<Job>) => Promise<void>
+  updateJob: (id: string, updates: Partial<Job>, activityNote?: string) => Promise<void>
 ) {
   const dueJobs = useMemo(() => jobs.filter(isDue), [jobs]);
 

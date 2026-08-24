@@ -1,4 +1,3 @@
-import React from 'react';
 import { Search, SlidersHorizontal, ArrowUpDown } from 'lucide-react';
 import type { KanbanStatus, ResumeEntry } from '../../types';
 import { KANBAN_COLUMNS } from '../../types';
