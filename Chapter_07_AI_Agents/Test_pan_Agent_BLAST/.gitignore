@@ -1,4 +1,4 @@
-settings.json
+.env
+.tmp/
 __pycache__/
 *.pyc
-
